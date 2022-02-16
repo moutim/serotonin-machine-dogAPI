@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './App.css'
+import fetchAPI from './services/fetchAPI';
+import Loading from './components/Loading';
+import CardDog from './components/CardDog';
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    loading: false,
+      dog: {}
+  }
+
+  handleButton = async () => {
+    this.setState({ loading: true });
+    const dog = await fetchAPI();
+    this.setState({ loading: false, dog});
+  }
+
+  async componentDidMount() {
+    this.setState({ loading: true });
+    const dog = await fetchAPI();
+    console.log(dog);
+    this.setState({ dog, loading: false });
+  }
+
+  render(){
+    const { dog: { message, breedFormated }, loading } = this.state;
+    return (
+      <>
+        <Header />
+        <main>
+          <h1>Serotonin Machine</h1>
+          {
+            loading ? <Loading /> : (
+              <CardDog url={ message } dogName={ breedFormated } />
+              )
+          }
+          <button onClick={ this.handleButton }>Gerar</button>
+        </main>
+      </>
+    );
+  }
 }
 
 export default App;
+
