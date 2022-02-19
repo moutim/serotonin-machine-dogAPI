@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css'
 import { DualRing } from 'react-awesome-spinners';
 import fetchAPI from './services/fetchAPI';
-import Loading from './components/Loading';
 import CardDog from './components/CardDog';
 import Header from './components/Header';
 import Footer from './components/Footer';
