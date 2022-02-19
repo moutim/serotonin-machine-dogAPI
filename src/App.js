@@ -2,22 +2,30 @@ import React, { Component } from 'react';
 import './App.css'
 import { DualRing } from 'react-awesome-spinners';
 import getListBreeds from './services/getListBreeds';
+import BreedSelect from './components/BreedSelect';
 import fetchAPI from './services/fetchAPI';
 import CardDog from './components/CardDog';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 
 class App extends Component {
   state = {
     loading: false,
-      dog: {}
+      dog: {},
+      listBreed: getListBreeds,
+      selectBreed: 'breeds'
   }
 
   handleButton = async () => {
     this.setState({ loading: true });
     const dog = await fetchAPI();
     this.setState({ loading: false, dog});
+  }
+
+  handleChange = async ({ target: { value }}) => {
+    this.setState({ loading: true });
+    const breed = value;
+    this.setState({ loading: false, selectBreed: breed });
   }
 
   async componentDidMount() {
@@ -27,31 +35,13 @@ class App extends Component {
   }
 
   render(){
-    const { dog: { message, breedFormated }, loading } = this.state;
+    const { dog: { message, breedFormated }, loading, listBreed } = this.state;
     return (
       <>
         <Header />
         <main>
           <h1>Serotonin Machine</h1>
-
-          <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
-        <RadioGroup
-          row
-          aria-labelledby="demo-row-radio-buttons-group-label"
-          name="row-radio-buttons-group"
-        >
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-          <FormControlLabel value="other" control={<Radio />} label="Other" />
-          <FormControlLabel
-            value="disabled"
-            disabled
-            control={<Radio />}
-            label="other"
-          />
-        </RadioGroup>
-      </FormControl>
+          <BreedSelect listBreed={ listBreed } handleChange={ this.handleChange } />
           {
             loading ? <div className="loading"><DualRing color="#ff9500" /></div>  : (
               <CardDog url={ message } dogName={ breedFormated } />
