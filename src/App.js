@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css'
+import { DualRing } from 'react-awesome-spinners';
 import fetchAPI from './services/fetchAPI';
 import Loading from './components/Loading';
 import CardDog from './components/CardDog';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 class App extends Component {
   state = {
@@ -32,12 +34,13 @@ class App extends Component {
         <main>
           <h1>Serotonin Machine</h1>
           {
-            loading ? <Loading /> : (
+            loading ? <div className="loading"><DualRing color="#ff9500" /></div>  : (
               <CardDog url={ message } dogName={ breedFormated } />
               )
           }
           <button onClick={ this.handleButton }>Gerar</button>
         </main>
+        <Footer />
       </>
     );
   }
