@@ -21,7 +21,6 @@ class App extends Component {
   async componentDidMount() {
     this.setState({ loading: true });
     const dog = await fetchAPI();
-    console.log(dog);
     this.setState({ dog, loading: false });
   }
 
