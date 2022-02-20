@@ -6,7 +6,7 @@ const getBreedFromURL = (message) => {
     return breedFormated;
 }
 
-const fetchAPI = async () => {
+export const fetchAPI = async () => {
     const result = await fetch('https://dog.ceo/api/breeds/image/random');
     const data = await result.json();
     const { message } = data;
@@ -18,7 +18,7 @@ const fetchAPI = async () => {
     };
 }
 
-const fetchAPIBreed = async (breed) => {
+export const fetchAPIBreed = async (breed) => {
     const result = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
     const data = await result.json();
     const { message } = data;
@@ -28,9 +28,4 @@ const fetchAPIBreed = async (breed) => {
         message: data.message,
         breedFormated
     }
-}
-
-module.exports = {
-    fetchAPI,
-    fetchAPIBreed,
 }
