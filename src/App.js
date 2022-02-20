@@ -59,7 +59,7 @@ class App extends Component {
               <CardDog url={ message } dogName={ breedFormated } />
               )
           }
-          <button onClick={ this.handleButton }>Gerar</button>
+          <button onClick={ this.handleButton }>Release Serotonin</button>
         </main>
         <Footer />
       </>
