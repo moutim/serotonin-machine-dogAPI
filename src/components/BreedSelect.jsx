@@ -10,13 +10,14 @@ export class BreedSelect extends Component {
       const { listBreed, handleChange } = this.props;
     return (
         <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-label">All Breeds</InputLabel>
             <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                label="Age"
+                label="Breeds"
                 onChange={ handleChange }
             >
+                <MenuItem key="allBreeds" value="allBreeds">All Breeds</MenuItem>
                 {
                     listBreed.map((item, index) => (
                         <MenuItem key={ index } value={ item }>{ item }</MenuItem>
