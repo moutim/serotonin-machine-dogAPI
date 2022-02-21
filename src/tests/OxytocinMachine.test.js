@@ -5,6 +5,7 @@ import App from '../App';
 import Header from '../components/Header';
 import CardDog from '../components/CardDog';
 import userEvent from '@testing-library/user-event';
+import Footer from '../components/Footer';
 
 describe('Header tests', () => {
     it('Checks if the component Header renders an image with the alt attribute', () => {
@@ -51,3 +52,13 @@ describe('App tests', () => {
         expect(global.fetch).toBeCalledWith('https://dog.ceo/api/breeds/image/random');
     });
 });
+
+describe('Footer tests', () => {
+    it('Checks if the component Footer renders an paragraph with correctly text', () => {
+        render(<Footer />);
+
+        const footerText = screen.getByText(/Developed by Vitor Moutim ® 2022/i);
+
+        expect(footerText).toBeInTheDocument();
+    })
+})
