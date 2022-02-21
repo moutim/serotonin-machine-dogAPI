@@ -38,7 +38,6 @@ class App extends Component {
     this.setState({ loading: true });
     const dog = await fetchAPI();
     const listBreed = await getListBreeds();
-    console.log(listBreed);
     this.setState({ dog, loading: false, listBreed });
   }
 
