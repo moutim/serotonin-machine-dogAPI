@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/oxytocin-machine-dogAPI/static/css/main.cc1ac656.css",
-    "main.js": "/oxytocin-machine-dogAPI/static/js/main.9f068b66.js",
-    "static/media/logo.svg": "/oxytocin-machine-dogAPI/static/media/logo.e791896df2ed000c90bb164ef5e68e76.svg",
+    "main.css": "/oxytocin-machine-dogAPI/static/css/main.eb2827c8.css",
+    "main.js": "/oxytocin-machine-dogAPI/static/js/main.cd720efc.js",
+    "static/media/logo.svg": "/oxytocin-machine-dogAPI/static/media/logo.9c269eb1da851cd61135a9329302e913.svg",
     "index.html": "/oxytocin-machine-dogAPI/index.html",
-    "main.cc1ac656.css.map": "/oxytocin-machine-dogAPI/static/css/main.cc1ac656.css.map",
-    "main.9f068b66.js.map": "/oxytocin-machine-dogAPI/static/js/main.9f068b66.js.map"
+    "main.eb2827c8.css.map": "/oxytocin-machine-dogAPI/static/css/main.eb2827c8.css.map",
+    "main.cd720efc.js.map": "/oxytocin-machine-dogAPI/static/js/main.cd720efc.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc1ac656.css",
-    "static/js/main.9f068b66.js"
+    "static/css/main.eb2827c8.css",
+    "static/js/main.cd720efc.js"
   ]
 }
