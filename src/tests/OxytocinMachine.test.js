@@ -13,4 +13,12 @@ describe('Header tests', () => {
 
         expect(img).toBeInTheDocument();
     });
+
+    it('Checks if the component header renders a paragraph with the right text', () => {
+        render(<Header />);
+
+        const paragraph = screen.getByText(/do you want to release that feeling of seeing a puppy\? here you can find thousands of dog pictures\./i);
+
+        expect(paragraph).toBeInTheDocument();
+    });
 });
