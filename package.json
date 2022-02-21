@@ -2,7 +2,7 @@
   "name": "serotonin-machine",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://moutim.github.io/serotonin-machine-dogAPI/",
+  "homepage": "https://moutim.github.io/oxytocin-machine-dogAPI/",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
