@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
         <footer>
-            <p>Developed by Vitor Moutim  ® 2022</p>
+            <p>Developed by Vitor Moutim ® 2022</p>
         </footer>
     )
   }

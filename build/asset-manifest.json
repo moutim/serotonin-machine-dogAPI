@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/serotonin-machine-dogAPI/static/css/main.cc1ac656.css",
-    "main.js": "/serotonin-machine-dogAPI/static/js/main.f389e836.js",
-    "static/media/logo.svg": "/serotonin-machine-dogAPI/static/media/logo.5884790ddcbc8f452c469312420cc0e0.svg",
+    "main.js": "/serotonin-machine-dogAPI/static/js/main.7b96e01d.js",
+    "static/media/logo.svg": "/serotonin-machine-dogAPI/static/media/logo.e791896df2ed000c90bb164ef5e68e76.svg",
     "index.html": "/serotonin-machine-dogAPI/index.html",
     "main.cc1ac656.css.map": "/serotonin-machine-dogAPI/static/css/main.cc1ac656.css.map",
-    "main.f389e836.js.map": "/serotonin-machine-dogAPI/static/js/main.f389e836.js.map"
+    "main.7b96e01d.js.map": "/serotonin-machine-dogAPI/static/js/main.7b96e01d.js.map"
   },
   "entrypoints": [
     "static/css/main.cc1ac656.css",
-    "static/js/main.f389e836.js"
+    "static/js/main.7b96e01d.js"
   ]
 }
